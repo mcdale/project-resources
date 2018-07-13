@@ -1,0 +1,34 @@
+@import "base/variables";
+
+.paper-sidenav-container {
+  $sidenav-z-index: 1000;
+  $sidenav-shadow: 2px 4px 8px transparentize($base-border-color,0.5);
+  display: flex;
+  flex-direction: row;
+  .paper-sidenav {
+    border: $base-border;
+    box-shadow: $sidenav-shadow;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 20rem;
+    min-height: 100vh;
+    position: relative;
+    z-index: $sidenav-z-index;
+    .paper-toolbar {
+      background-color: orange;
+      min-height: 5rem;
+      .logo {
+
+      }
+    }
+    .paper-content {
+      flex: 1;
+    }
+  }
+}
+
+.paper-content {
+  padding: ($base-spacing/2) $base-spacing;
+  overflow-x: none;
+}

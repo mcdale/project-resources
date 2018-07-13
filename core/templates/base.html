@@ -1,0 +1,67 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+        <link href="{% static 'apple-touch-icon.png' %}" rel="apple-touch-icon" />
+        <link href="{% static 'apple-touch-icon-152x152.png' %}" rel="apple-touch-icon" sizes="152x152" />
+        <link href="{% static 'apple-touch-icon-167x167.png' %}" rel="apple-touch-icon" sizes="167x167" />
+        <link href="{% static 'apple-touch-icon-180x180.png' %}" rel="apple-touch-icon" sizes="180x180" />
+        <link href="{% static 'android-chrome-hdpi.png" rel="icon' %}" sizes="192x192" />
+        <link href="{% static 'android-chrome-ldpi.png" rel="icon' %}" sizes="128x128" />
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+
+        {% wagtailuserbar %}
+        <div class="paper-sidenav-container">
+          <nav class="paper-sidenav">
+            <div class="paper-toolbar">
+              <div class="logo"></div>
+            </div>
+            <div class="paper-content">
+              <div class="paper-list">
+                <a class="menu-item" href="/">Home</a>
+              </div>
+            </div>
+          </nav>
+          <div id="main" class="flex layout-column" tabindex="-1" role="main">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+        <div class="paper-toaster" data-parent="#main" />
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

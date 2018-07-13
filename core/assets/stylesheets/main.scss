@@ -1,0 +1,21 @@
+@import "bourbon";
+@import "base/base";
+@import "components/components";
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+header[role="banner"] {
+  display: flex;
+  flex-direction: row;
+  h4 {
+    margin-top: 3rem;
+  }
+}
+#main {
+  flex: 1;
+}
+footer {
+
+}

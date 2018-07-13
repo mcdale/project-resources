@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<header role="banner">
+
+  <a href="/">{% image page.page_image height-72 %}</a>
+  <h4>Project Resources - NESC</h4>
+
+</header>
+<main>
+
+</main>
+
+{% endblock %}
