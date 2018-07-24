@@ -32,3 +32,10 @@
   padding: ($base-spacing/2) $base-spacing;
   overflow-x: none;
 }
+
+a.menu-item {
+  color: $base-font-color;
+  display: block;
+  padding: $base-spacing/2 0 0;
+  text-decoration: none;
+}

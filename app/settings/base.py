@@ -28,6 +28,10 @@ INSTALLED_APPS = [
     'home',
     'search',
 
+    'treebeard',
+    'wagtailfontawesome',
+    
+    'wagtail.contrib.modeladmin',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',

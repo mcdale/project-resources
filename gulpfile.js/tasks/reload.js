@@ -9,5 +9,5 @@ gulp.task('reload', function(){
 
   gulp.watch('app/static/css/**/*.css').on('change', browserSync.reload);
   gulp.watch('app/static/js/**/*.js').on('change', browserSync.reload);
-  gulp.watch(['app/templates/**/*.html','home/templates/**/*.html']).on('change', browserSync.reload);
+  gulp.watch(['core/templates/**/*.html','home/templates/**/*.html']).on('change', browserSync.reload);
 });
