@@ -14,7 +14,12 @@
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
     "browser-sync": "^2.24.5",
+    "browserify": "^16.2.2",
+    "d3": "^5.5.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cached": "^1.1.1",
@@ -29,8 +34,11 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg2png": "^2.0.2",
     "gulp-to-ico": "^1.0.0",
+    "gulp-uglify": "^3.0.1",
     "merge-stream": "^1.0.1",
     "require-dir": "^1.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "yargs": "^11.0.0"
   }
 }

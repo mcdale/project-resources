@@ -7,8 +7,14 @@ module.exports = {
     },
   },
   javascripts: {
-    src: ['core/assets/javascripts/**/*.{js}'],
+    src: ['core/assets/javascripts/**/*.js'],
     dest: 'app/static/js',
+    entries: [
+      {
+        src: 'core/assets/javascripts/core/index.js',
+        dest: 'core/core.js'
+      }
+    ],
   },
   stylesheets: {
     src: [
